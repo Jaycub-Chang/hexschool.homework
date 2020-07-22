@@ -1,0 +1,232 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*以下工作區*/
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: "微軟正黑體";
+    line-height: 1.5;
+}
+.wrap{
+    margin: 0 auto;
+    position: relative;
+}
+.wrap::after{
+    background-image: url(https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    content: "";
+}
+
+.ori-price{
+    text-decoration: line-through;
+}
+.price{
+    font-weight: bold;
+    color: #CE0000;
+}
+.content{
+    display: flex;
+    margin: 0 auto;
+    width: 1080px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding-top: 15px;
+    padding-left: 300px;
+    padding-right: 300px;
+    padding-bottom: 15px;
+    background: rgb(105, 105, 105);
+    color: white;
+    font-weight: bolder;
+    font-size: 36px;
+}
+.header a{
+    font-size: 18px;
+    color: white;
+    border-bottom: 5px transparent solid;
+    padding-bottom: 5px;
+}
+.header a:hover{
+    font-size: 18px;
+    color: white;
+    border-bottom: 5px white solid;
+}
+.header a:active{
+    font-size: 18px;
+    color: #e7eeea;
+}
+.infoList{
+    display: flex;
+}
+.infoList li{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.menue h2{
+    background: #37523d;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    padding: 20px;
+    width: 240px;
+}
+.menue ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menue li{
+    width: 240px;
+    text-align: center;
+    border: 1px solid #e7eeea;
+    font-size: 20px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    display: block;
+    color: #37523d;
+    padding: 20px;
+}
+.menue a{
+    padding-left: 50px;
+    padding-right: 50px;
+    /*border: 1px solid black;*/
+    text-align: center;
+    display: block;
+    background: #e7eeea;
+    color: #37523d;
+    font-size: 26px;
+    font-weight: bold;
+}
+.menue a:hover{
+    background: #37523d;
+    color: #e7eeea;
+}
+.menue a:active{
+    background: #37523d;
+    color: white;
+}
+.card-columns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+.card img{
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 20px;
+}
+.container h2{
+    background: #D26900	;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center;
+    padding: 20px;
+}
+.card{
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 2px 2px #9b9b9b;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card a{
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    display: block;
+    background: #e7eeea;
+    color: #37523d;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card a:hover{
+    background: #37523d;
+    color: #e7eeea;
+}
+.card a:active{
+    background: #37523d;
+    color: white;
+}
+.card-body{
+    text-align: center;
+    font-size: 18px;
+}
+.card-title{
+    font-weight: bolder;
+}

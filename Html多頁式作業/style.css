@@ -1,0 +1,497 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*home.html area*/
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: "微軟正黑體";
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.head{
+    height: 560px;
+    margin-bottom: 50px;
+}
+#homehead{
+    background-image: url(HTML作業圖檔/多頁式作業＿images/bg_index.png);
+}
+.toplist{
+    padding-top:  15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+}
+.toplist h1{
+    width: 182px;
+    height: 36px;
+    display: block;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url(HTML作業圖檔/多頁式作業＿images/logo.png);
+}
+.toplist ul{
+    display: flex;
+    justify-content: space-around;
+}
+.toplist a{
+    padding: 18px;
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 5px solid transparent;
+}
+.toplist a:hover{
+    border-bottom: 5px solid #00cc99;
+    color: #00cc99;
+}
+.head h2{
+    font-weight: 550;
+    color: #00cc99;
+    font-size: 50px;
+    padding-top: 100px;
+    padding-left: 50px;
+}
+.head h2 span{
+    color: white;
+}
+.head input[type="button"]{
+    margin-left: 50px;
+    margin-top: 40px;
+    padding: 15px 30px;
+    display: block;
+    border-radius: 8px;
+    background: #00cc99;
+    color: white;
+    border: none;
+    font-size: 26px;
+    font-weight: bolder;
+}
+.head input[type="button"]:hover{
+    background: white;
+    color: #00cc99;
+    cursor: pointer;
+}
+.head input[type="button"]:active{
+    background: gray;
+    color: #00cc99;
+    cursor: pointer;
+    border: none;
+}
+.courseintro{
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 25px;
+}
+h3{
+    font-size: 36px;
+    color: #00cc99;
+    font-weight: bold;
+}
+h3 span{
+    margin-left: 18px;
+    font-size: 18px;
+    color: #9b9b9b;
+}
+.courseintro input[type="button"]{
+    background: white;
+    color: #00cc99;
+    cursor: pointer;
+    border: #00cc99 3px solid;
+    border-radius: 8px;
+    height: 36px;
+    padding: 3px 10px;
+}
+.courseintro input[type="button"]:hover{
+    background: #00cc99;
+    color: white;
+}
+
+.courseintro input[type="button"]:active{
+    background: #9b9b9b;
+}
+.homecontent ul{
+    display: flex;
+    justify-content: space-around;
+}
+.homecontent li{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 3px 3px #9b9b9b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.homecontent li h4{
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.homecontent p{
+    color: #9b9b9b;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.coursecompare{
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+.homecontent table{
+    margin-left: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+    width: 944px;
+}
+.homecontent table tr{
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.homecontent table th{
+    background: #f7f7f7;
+    font-weight: bold;
+}
+.homecontent table th,table td{
+    padding-left: 40px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.homecontent table span{
+    color: #00a67d;
+    font-weight: bold;
+}
+.moreinfo{
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background: #ebebeb;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.moreinfo h5{
+    font-size: 36px;
+    font-weight: bold;
+}
+.moreinfo form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.moreinfo input[type="text"]{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 460px;
+}
+.moreinfo input[type="submit"]{
+    padding: 15px 30px;
+    border-radius: 8px;
+    background: #00cc99;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    width: 150px;
+    font-weight: bold;
+}
+.moreinfo input[type="submit"]:hover{
+    background: white;
+    color: #00cc99;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.footer{
+    background: #323228;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer ul{
+    display: flex;
+}
+.footer li{
+    margin-right: 20px;
+}
+
+
+/*course.html area*/
+#coursehead{
+    position: relative;
+    background-image: url(HTML作業圖檔/多頁式作業＿images/bg_course.png);
+}
+.moreinfo input[type="button"]{
+    margin-top: 20px;
+    padding: 15px 30px;
+    display: block;
+    border-radius: 8px;
+    background: #00cc99;
+    color: white;
+    border: none;
+    font-size: 26px;
+    font-weight: bolder;
+}
+.moreinfo input[type="button"]:hover{
+    background: white;
+    color: #00cc99;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.moreinfo input[type="button"]:active{
+    background: gray;
+    color: #00cc99;
+    cursor: pointer;
+    border: none;
+}
+#coursehead h2{
+    font-weight: 550;
+    color: white;
+    font-size: 50px;
+    padding-top: 60px;
+    padding-left: 50px;
+}
+#coursehead span{
+    font-size: 25px;
+    font-weight: bold;
+    color: #00cc99;
+    margin-left: 50px;
+    margin-bottom: 80px;
+    display: block;
+}
+#coursehead .headhtmlicon{
+    position: absolute;
+    top: 110px;
+    right: 180px;
+}
+#coursehead .headcssicon{
+    position: absolute;
+    top: 110px;
+    right: 50px;
+}
+.teacher{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.teacherexp{
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+    color: #9b9b9b;
+    font-weight: bold;
+}
+.teacher span{
+    font-size: 36px;
+    color: #323228;
+    font-weight: bold;
+    margin: 0;
+}
+.midarea{
+    margin-left: 190px;
+    width: 630px;
+}
+.pros{
+    counter-reset: num;
+    margin-top: 15px;
+}
+.pros span{
+    display: block;
+    position: relative;
+    padding-left: 80px;
+    font-weight: bold;
+}
+.pros span::before{
+    counter-increment: num;
+    content: counter(num) '. ';
+    position: absolute;
+    left: 40px;
+}
+.coursesum{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.coursesum li{
+    padding-left: 40px;
+    padding-right: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.odditem{
+    background: #ebebeb;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+}
+.evenitem{
+    color: #9b9b9b;
+    font-weight: bold;
+}
+#teachername{
+    margin-top: 0;
+}
+
+
+/*qa.html area*/
+#qahead{
+    background-image: url(HTML作業圖檔/多頁式作業＿images/bg_QA.png);
+}
+.moreinfo textarea{
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    padding: 10px;
+    width: 460px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+#qahead h2{
+    font-weight: 550;
+    color: white;
+    font-size: 50px;
+    padding-top: 80px;
+    text-align: center;
+    padding-left: 0;
+}
+#qahead span{
+    font-size: 25px;
+    font-weight: bold;
+    color: #00cc99;
+    margin-bottom: 80px;
+    display: block;
+    text-align: center;
+}
+.searchtool{
+    display: flex;
+    justify-content: center;
+}
+.searchtool a{
+    background: white;
+    display: block;
+    border: none;
+    padding: 10px;
+}
+.searchtool a:hover{
+    box-shadow: #9b9b9b 0px 5px 5px inset;
+}
+.searchtool img{
+    height: 25px;
+    width: 25px;
+}
+#qahead input{
+    display: block;
+    border: none;
+    width: 500px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.midarea h6{
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+.midarea p{
+    font-size: 18px;
+    color: #9b9b9b;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.midarea h3{
+    margin-top: 50px;
+}
+.midarea ol{
+    font-size: 18px;
+    color: #9b9b9b;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 50px;
+    text-indent: 18px;
+    list-style: decimal;
+}
+.email{
+    color: #00cc99;
+}
+.refund li{
+    font-size: 18px;
+    color: #9b9b9b;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 52px;
+    padding-left: 18px;
+    list-style: disc;
+}
+
+.refund span{
+    font-weight: bold;
+    font-size: 18px;
+}

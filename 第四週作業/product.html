@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5" id="app2">
+        <div class="content">
+            <!--新增產品按鈕--->
+            <div class="text-right mt-4">
+                <button type="button" class="btn btn-success" @click="triggermodal('new')" >新增產品</button>
+                <button class="btn btn-outline-primary" type="button" @click="signout">
+                  登出
+                </button>
+              </div>
+            <!--產品狀態列表-->
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th width="160">分類</th>
+                        <th width="320">產品名稱</th>
+                        <th width="160">原價</th>
+                        <th width="120">售價</th>
+                        <th width="120">是否啟用</th>
+                        <th width="120">編輯</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, key) in products" :key="item.id"> <!-- 使用v-for將後台的products依序呈現在畫面上 -->
+                        <td>{{item.category}}</td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.origin_price}}</td>
+                        <td>{{item.price}}</td>
+                        <td>
+                            <span class="text-success" v-if="item.is_enabled">啟用</span>  <!-- 使用v-if呈現資料是否更新啟動 -->
+                            <span v-else>未啟用</span>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-outline-primary btn-sm" @click="triggermodal('edit',item)">編輯</button>  <!-- 使用v-on打開modal -->
+                                <button type="button" class="btn btn-outline-danger btn-sm" @click="triggermodal('del',item)">刪除</button>    <!-- 使用v-on打開modal -->
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination :pages="pagination" @pagenum="getProducts" ></pagination>
+            <!-- Modal -->
+            <div id="productModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+                <modal :temp-product="tempProduct" :uuid="uuid" :api-path="apiPath" @update="getProducts" :products="products"></modal>
+            </div>
+            <div id="delProductModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <delmodal :temp-product="tempProduct" :uuid="uuid" :api-path="apiPath" @update="getProducts" ></delmodal>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.9/dist/vue.js"></script>
+    <script src="product.js" type="module" ></script>
+</body>
+
+</html>

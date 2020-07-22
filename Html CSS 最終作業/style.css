@@ -1,0 +1,362 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+/*finalwork area*/
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: "微軟正黑體";
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+.wrap{
+    max-width: 1080px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.top-head{
+    padding-bottom: 0.5%;
+}
+.top-area{
+    background: #f6f6f6;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+.top-area a{
+    display: block;
+    margin-right: 25px;
+}
+.top-area a:hover{
+    color: #e12d80;
+}
+.top-area a:active{
+    background: #dddddd;
+}
+.top-area img{
+    margin-right: 5px;
+}
+.headdivider{
+    position: absolute;
+    border-right: 2px solid gray;
+    height: 18px;
+    width: 1px;
+    right: 120px;
+}
+.bot-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bot-area h1 a{
+    background-image: url(HTML作業圖檔/最終作業_images/logo.png);
+    width: 224px;
+    height: 50px;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.bot-area ul{
+    display: flex;
+}
+.bot-area ul li{
+    font-weight: bold;
+    margin-right: 20px;
+}
+.bot-area ul a{
+    padding: 10px;
+    display: block;
+    color: #00cc99;
+    border-bottom: 3px solid transparent;
+}
+.bot-area ul a:hover{
+    border-bottom: 3px solid #00cc99;
+}
+.bot-area ul a:active{
+    border-bottom: 3px solid #00cc99;
+    background: #e7eeea;
+}
+.bot-head{
+    margin:0px auto;
+    position: relative;
+    height: 346px;
+    background-image: url(HTML作業圖檔/最終作業_images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bannerbackground{
+    background: black ;
+    position: absolute;
+    opacity: 0.3;
+    width: 100%;
+    height: 160px;
+    bottom: 100px;
+}
+.bot-head h2{
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 36px;
+    position: absolute;
+    bottom: 100px;
+}
+.content{
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+.content .course1,.course2,.course3{
+    width: 33.333%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid #e7eeea;
+    border-left: 1px solid #e7eeea;
+    border-bottom: 1px solid #e7eeea;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px gray;
+}
+.content img{
+    margin: 20px;
+}
+.content h2{
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.content .course2 h2{
+    margin-top: 51px;
+}
+.course3 h2{
+    margin-top: 21px;
+}
+.course3 p{
+    width: 200px;
+    text-align: left;
+}
+.course3 ul{
+    list-style: disc;
+}
+.table{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 8%;
+    text-align: center;
+}
+.table h2{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+.table table tr{
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.table th{
+    background: #f7f7f7;
+    font-weight: bold;
+}
+.table th,.table td{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.table span{
+    color: #00a67d;
+    font-weight: bold;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: -webkit-linear-gradient(#00644b, #009872);
+    padding: 3%;
+}
+.form h2{
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.form form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.form .left-area{
+    margin-right: 5%;
+    width: 40%;
+}
+.form input{
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    width: 100%;
+}
+.form textarea{
+    height:280px;
+    border-radius: 3px;
+    border-style: none;
+    padding: 10px;
+    width: 100%;
+}
+.form label{
+    color: white;
+    font-weight: bold;
+}
+.right-area{
+    position: relative;
+    width: 40%;
+}
+input:focus,textarea:focus{
+    border: 3px solid #dddddd;
+}
+input[type=submit]{
+    width: 100px;
+    background: #00cc99;
+    color: white;
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background: white;
+    color: #00644b;
+}
+.footer{
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    font-weight: bold;;
+}
+.footer img{
+    width: 171px;
+    height: 36px;
+}
+.footer span{
+    color: #e12d80;
+}
+@media (max-width:767px){
+    .bot-area{
+        display: flex;
+        flex-direction: column;
+    }
+    .bot-area ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .bot-area a{
+        text-align: center;
+        font-size: 20px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content .course1,.course2,.course3{
+        width: 80%;
+    }
+    .content div{
+        margin-bottom: 10%;
+    }
+    .form form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 8%;
+    }
+    form .right-area{
+        padding-bottom: 8%;
+        width: 100%;
+    }
+    form .left-area{
+        margin: 0 auto;
+    }
+    .form .left-area{
+        margin: 0;
+        width: 100%;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer ul{
+        padding-top: 3%;
+    }
+}
+
