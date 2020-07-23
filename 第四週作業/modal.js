@@ -67,10 +67,10 @@ export default {
                     </div>
                     <div class="form-group">
                         <div class="form-check">
-                            <input id="is_enabled" v-model="tempProduct.is_enabled"
-                                class="form-check-input" type="checkbox" :true-value="1"
-                                :false-value="0">
-                            <label class="form-check-label" for="is_enabled">是否啟用</label>
+                            <input id="enabled" v-model="tempProduct.enabled"
+                                class="form-check-input" type="checkbox" :true-value=true
+                                :false-value=false >
+                            <label class="form-check-label" for="enabled">是否啟用</label>
                         </div>
                     </div>
                 </div>
@@ -95,17 +95,16 @@ export default {
                 axios.patch(url,vm.tempProduct)
                 .then((res)=>{
                     console.log(res);
-                    this.$emit('update');
+                    vm.$emit('update');
                 })
             }else{
                 let newurl = `${vm.apiPath}${vm.uuid}/admin/ec/product`;
                 let id = new Date().getTime();
                 vm.tempProduct.id = id;
-                console.log(vm.tempProduct);
                 axios.post( newurl ,vm.tempProduct)
                     .then((res)=>{
                         console.log(res);
-                        this.$emit('update');
+                        vm.$emit('update');
                     });
             };
         },

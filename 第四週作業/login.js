@@ -6,7 +6,7 @@ new Vue({
     data: {
         user: {
             email: '',
-            passwords: '',
+            password: '',
         },
         token: '',
     },

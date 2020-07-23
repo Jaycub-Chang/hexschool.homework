@@ -18,7 +18,7 @@ new Vue({
     methods: {
         getProducts(num = 1) {
             const vm = this;
-            const url = `${vm.apiPath}${vm.uuid}/ec/products?page=${num}`;
+            const url = `${vm.apiPath}${vm.uuid}/admin/ec/products?page=${num}`;
             axios.get(url)
                 .then((response) => {
                     vm.products = response.data.data;
