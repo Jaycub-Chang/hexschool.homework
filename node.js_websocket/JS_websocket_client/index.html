@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast_live_chat</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<style>
+    html {
+        height: 100vh;
+    }
+
+    body {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .loader {
+        text-align: center;
+    }
+
+    .loader span {
+        display: inline-block;
+        vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        background: black;
+        border-radius: 10px;
+        animation: loader 0.8s infinite alternate;
+    }
+
+    .loader span:nth-of-type(2) {
+        animation-delay: 0.2s;
+    }
+
+    .loader span:nth-of-type(3) {
+        animation-delay: 0.6s;
+    }
+
+    @keyframes loader {
+        0% {
+            opacity: 0.9;
+            transform: scale(0.5);
+        }
+
+        100% {
+            opacity: 0.1;
+            transform: scale(1);
+        }
+    }
+
+    #typing_area {
+        padding: 1rem 0;
+    }
+
+    #nickWrap {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .nick_area {
+        background-color: #2c3e50;
+        color: #ecf0f1;
+    }
+
+    .content_area {
+        background-image: url(./001.jpg);
+        background-size: cover;
+        padding: 2rem 5rem;
+        height: 100%;
+    }
+    #typing_area,.panel-heading{
+        background-color:rgb(236,240,241,0.8);
+        color: #2c3e50;
+        padding: 1rem 0;
+    }
+    #contentWrap {
+        text-align: center;
+        margin: 0 auto;
+    }
+    #chat_area{
+        background-color:rgb(236,240,241,0.85);
+        color: #2c3e50;
+        padding: 1rem 0;
+        height: 60vh;
+        border-top: #2c3e50 1px solid;
+        overflow-y: auto;
+    }
+    #room_member_area{
+        background-color:rgb(236,240,241,0.85);
+        color: #2c3e50;
+        padding: 1rem 0;
+        height: 100%;
+        border-top: #2c3e50 1px solid;
+        border-left: #2c3e50 1px solid;
+        overflow-y: auto;
+    }
+    #send-message{
+        margin-top: 1rem;
+    }
+</style>
+
+<body>
+
+    <div class="container-fluid nick_area">
+        <div id="nickWrap">
+            <h2>歡迎來到Podcast線上多人聊天室</h2>
+            <form id="setNick" role="form">
+                <h3 class="form-signin-heading">請輸入您在聊天室的名稱以進入:</h3>
+                <p id="nickError"></p>
+                <div style="margin:20px;">
+                    <input size="35" id="txtNickname" required>
+                </div>
+                <button type="botton" class="btn btn-lg btn-warning" id="nickname_Submit_btn">確認並進入</button>
+                <!-- <input type="botton" class="btn btn-lg btn-warning" id="nickname_Submit_btn" value="確認並進入"> -->
+            </form>
+        </div>
+    </div>
+    <div class="container-fluid content_area">
+        <div id="contentWrap" class="col-md-9">
+            <div id="chatWrap" class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Podcast頻道即時聊天室</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row no-gutters">
+                        <div class="col-md-9 no-gutters">
+                            <div id="chat_area">
+                                <h5 id="chat"></h5>
+                                <p id="chat_time"></p>
+                            </div>
+                            <div id="typing_area">
+                                <div class="loader" id="loader">
+                                    <h5 id="typing_client_display" style="display:inline;"></h5>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 no-gutters">
+                            <div id="room_member_area">
+                                <h4>聊天室名單</h4>
+                                <div id="room_member_list">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form id="send-message">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="請輸入聊天訊息..." id="message">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success"
+                                id="message_send_btn">送出留言</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
